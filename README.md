@@ -32,5 +32,49 @@ Learnt some good coding habits. For Eg: Not to use an API key directly on the ma
 
 
 
+# DEMO 🚀
+
+
+![Screenshot 2025-05-16 013523](https://github.com/user-attachments/assets/9a1f70fe-791b-4cef-9dbd-e3ed97a40935)
+
+
+
+THIS IS THE DEMO WHEN A CLEAN FILE IS PUT TO TEST 
+
+
+
+![Screenshot 2025-05-16 013624](https://github.com/user-attachments/assets/fb381e62-52d2-433e-b66c-c284944d3749)
+
+
+
+
+THIS IS THE RESULT WHEN A CLEAN URL IS PUT TO TEST
+
+
+
+![Screenshot 2025-05-16 013714](https://github.com/user-attachments/assets/a3b54d85-320a-4e5c-95a1-a0714d41206c)
+
+
+
+THIS IS THE RESULT WHEN A URL IS SUSPECTED TO BE A PHISHING URL
+
+
+
+![Screenshot 2025-05-16 013813](https://github.com/user-attachments/assets/86e37212-0ee0-4a6e-a9b0-5002cb49bbc0)
+
+
+
+
+THIS IS THE RESULT WHEN A URL IS SUSPECTED TO BE A MALWARE URL IS PUT TO TEST
+
+
+
+
+
+
+
+
+
+
 
 
