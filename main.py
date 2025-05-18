@@ -1,5 +1,5 @@
-from flask import Flask,render_template,request #Flask for creating the application, render_template fro setting up communication between BE & FE, request for requesting
-import google.generativeai as genai #using googles generative AI for evaluating the files based on prompts.
+from flask import Flask,render_template,request 
+import google.generativeai as genai 
 import os
 import PyPDF2 #used for text extraction from .txt and pdf file
 from dotenv import load_dotenv#for taking data from .env files
@@ -20,7 +20,7 @@ genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 model=genai.GenerativeModel("gemini-1.5-flash")
 #function that takes the text and predicts fake or real....here in this function we give the prompt to the genai model
 def predict_fake_or_real_file_context(text):
-    # putting the prompt.....
+   
     prompt=  f"""
     You are an expert in identifying scam messages in text, email etc. Analyze the given text and classify it as:
 
@@ -36,9 +36,9 @@ def predict_fake_or_real_file_context(text):
     **Only return the classification message and nothing else.**
     Note: Don't return empty or null, you only need to return message for the input text
     """
-    #recording response 
+    
     response = model.generate_content(prompt)
-    #taking out the message
+   
     return response.text.strip() 
 
 
@@ -67,13 +67,13 @@ def url_detection(url):
     Analyze the URL and return the correct classification (Only name in lowercase such as benign etc.
     Note: Don't return empty or null, at any cost return the corrected class
     """
-    #recording response
+  
     response=model.generate_content(promt)
     return response.text if response else "Detection Failed :("
 
 
 
-#routes
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -103,12 +103,12 @@ def detect_scam():
         return render_template('index.html',message="Files is empty or text could not be extracted")  
 
     #calling the function fake or real file context
-    # basically the extracted text will be evaluated according to the prompt specified in this function
+  
 
     Message= predict_fake_or_real_file_context((extracted_text))
 
 
-    # this will actually pront the message afte evaluation. That teh user can see.
+   
     return render_template('index.html',message=Message)
 
 
